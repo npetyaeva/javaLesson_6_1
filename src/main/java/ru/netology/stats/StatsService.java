@@ -41,9 +41,9 @@ public class StatsService {
     public int counterMonthLessAvg(int[] sales) {
 
         int counter = 0;
-
+        int avgSumSales = avgSales(sales);
         for (int sale : sales) {
-            if (sale < avgSales(sales)) {
+            if (sale < avgSumSales) {
                 counter += 1;
             }
         }
@@ -53,9 +53,9 @@ public class StatsService {
     public int counterMonthMoreAvg(int[] sales) {
 
         int counter = 0;
-
+        int avgSumSales = avgSales(sales);
         for (int sale : sales) {
-            if (sale > avgSales(sales)) {
+            if (sale > avgSumSales) {
                 counter += 1;
             }
         }
